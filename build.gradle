@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'konwisser'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation group: 'io.pkts', name: 'pkts-core', version: '3.0.10'
+    implementation group: 'io.pkts', name: 'pkts-streams', version: '3.0.10'
+}
+
+test {
+    useJUnitPlatform()
+}
